@@ -1,0 +1,20 @@
+{
+	"name": "sunnysideup/ecommerce_delivery_custom",
+	"type": "silverstripe-module",
+	"description": "basic implementation of a zip by zipcode delivery charge",
+	"homepage": "http://www.silverstripe-ecommerce.com",
+	"keywords": ["ecommerce", "e-commerce", "shop", "modifier_example", "delivery", "postal code", "zip code"],
+	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
+	"authors":[
+		{
+			"name": "Nicolaas Francken",
+			"homepage": "https://github.com/sunnysideup",
+			"email" : "modules@sunnysideup.co.nz",
+			"role" : "lead developer"
+		}
+	],
+	"require":{
+		"php": ">=5.3.2",
+		"sunnysideup/ecommerce": "*"
+	}
+}
