@@ -1,3 +1,7 @@
 EcommerceDBConfig:
   extensions:
     - EcommerceCustomDeliveryEcommerceDBConfigExtension
+
+Product:
+  belongs_many_many:
+    EcommerceDBConfig: EcommerceDBConfig

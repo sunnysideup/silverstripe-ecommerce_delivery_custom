@@ -8,7 +8,7 @@ class EcommerceCustomDeliveryEcommerceDBConfigExtension extends DataExtension {
 		'PriceWithApplicableProducts' => 'Currency'
 	);
 
-	private static $has_many = array(
+	private static $many_many = array(
 		'DeliverySpecialChargedProducts' => 'Product',
 		'SpecialPricePostalCodes' => 'EcommerceCustomDeliveryPostalCode'
 	);
@@ -21,14 +21,16 @@ class EcommerceCustomDeliveryEcommerceDBConfigExtension extends DataExtension {
 	);
 
 	public function updateCMSFields(FieldList $fields) {
+		$fields->removeFieldFromTab("Root", "DeliverySpecialChargedProducts");
+		$fields->removeFieldFromTab("Root", "SpecialPricePostalCodes");
 		$fields->addFieldsToTab(
 			"Root.Delivery",
 			array(
 				new TextField("DeliveryChargeTitle", "Delivery Charge Title"),
 				new CurrencyField("PriceWithoutApplicableProducts", "Standard Delivery Charge without Special Products in order"),
 				new CurrencyField("PriceWithApplicableProducts", "Standard Delivery Charge with Special Products in order"),
-				new GridField("DeliverySpecialChargedProducts", "Products with special Delivery Charge", $this->DeliverySpecialChargedProducts(), GridFieldEditOriginalPageConfigWithDelete::create()),
-				new GridField("SpecialPricePostalCodes", "Special Price Postal Codes", $this->SpecialPricePostalCodes(), GridFieldConfig_RelationEditor::create())
+				new GridField("DeliverySpecialChargedProducts", "Products with special Delivery Charge", $this->owner->DeliverySpecialChargedProducts(), GridFieldEditOriginalPageConfigWithDelete::create()),
+				new GridField("SpecialPricePostalCodes", "Special Price Postal Codes", $this->owner->SpecialPricePostalCodes(), GridFieldConfig_RelationEditor::create())
 			)
 		);
 	}

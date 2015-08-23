@@ -55,7 +55,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 */
 	public function runUpdate($force = false) {
 		$this->checkField("PostalCode");
-		$this->checkField("IsLocal");
+		$this->checkField("HasSpecialProducts");
 		parent::runUpdate($force);
 	}
 
@@ -96,7 +96,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 * @return Boolean
 	 */
 	public function ShowInTable() {
-		return true;
+		return $this->PostalCode ? true : false;
 	}
 
 	/**
@@ -126,7 +126,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 
 	protected function LiveCalculatedTotal() {
 		$hasSpecialProducts =  $this->LiveHasSpecialProducts();
-		$postalCodeObject =  $this->MyPricePostalCode();
+		$postalCodeObject =  $this->MyPostalCodeObject();
 		if(!$postalCodeObject) {
 			$postalCodeObject = EcommerceDBConfig::current_ecommerce_db_config();
 		}
@@ -160,7 +160,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 		if(count($applicableProducts)) {
 			$order = $this->Order();
 			if($order) {
-				forech($item as $order->OrderItems()) {
+				foreach($order->OrderItems() as $item) {
 					if(in_array($item->Product()->ID, $applicableProducts)) {
 						return true;
 					}
@@ -175,17 +175,20 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 * @return String
 	 */
 	function LivePostalCode(){
-		$postalCode = "unknown";
+		$postalCode = "";
 		$order = $this->Order();
 		if($order) {
 			$shippingAddress = $order->CreateOrReturnExistingAddress("ShippingAddress");
-			$postalCode = $shippingAddress->PostalCode
+			$postalCode = $shippingAddress->ShippingPostalCode;
 			if(!$postalCode) {
 				$billingAddress = $order->CreateOrReturnExistingAddress("BillingAddress");
-				$postalCode = $billingAddress->ShippingPostalCode;
+				$postalCode = $billingAddress->PostalCode;
 			}
 		}
-		return $postalCode;
+		if(intval($postalCode) > 0) {
+			return $postalCode;
+		}
+		return "";
 	}
 
 
@@ -195,14 +198,14 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 */
 	private function SelectedProductsArray(){
 		$ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
-		return $ecommerceConfig->DeliveryChargedProducts()->map("ID", "ID")->toArray();
+		return $ecommerceConfig->DeliverySpecialChargedProducts()->map("ID", "ID")->toArray();
 	}
 
 	/**
 	 *
 	 * @return EcommerceCustomDeliveryPostalCode | null
 	 */
-	private function MyPricePostalCode(){
+	private function MyPostalCodeObject(){
 		$ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
 		$postalCode = intval($this->LivePostalCode());
 		if($postalCode) {
