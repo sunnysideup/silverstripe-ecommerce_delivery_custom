@@ -125,17 +125,15 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	}
 
 	protected function LiveCalculatedTotal() {
-		$hasSpecialProducts =  $this->LiveHasSpecialProducts();
+		$nonSpecialCount =  $this->LiveHasSpecialProducts(false);
+		$specialCount =  $this->LiveHasSpecialProducts(true);
 		$postalCodeObject =  $this->MyPostalCodeObject();
 		if(!$postalCodeObject) {
 			$postalCodeObject = EcommerceDBConfig::current_ecommerce_db_config();
 		}
-		if($hasSpecialProducts) {
-			return $postalCodeObject->PriceWithApplicableProducts;
-		}
-		else {
-			return $postalCodeObject->PriceWithoutApplicableProducts;
-		}
+		return
+			($postalCodeObject->PriceWithoutApplicableProducts * $nonSpecialCount) +
+			($postalCodeObject->PriceWithApplicableProducts * $specialCount);
 	}
 
 
@@ -153,21 +151,26 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 // ######################################## *** debug functions
 
 	/**
-	 * @return boolean
+	 * @return int
 	 */
-	function LiveHasSpecialProducts(){
+	function ProductCountForTotal($special = false){
+		$count = 0;
 		$applicableProducts = $this->SelectedProductsArray();
 		if(count($applicableProducts)) {
 			$order = $this->Order();
 			if($order) {
 				foreach($order->OrderItems() as $item) {
-					if(in_array($item->Product()->ID, $applicableProducts)) {
-						return true;
+					if()
+					if($special && in_array($item->Product()->ID, $applicableProducts)) {
+						$count += $item->Quantity;
+					}
+					else {
+						$count += $item->Quantity;
 					}
 				}
 			}
 		}
-		return false;
+		return $count;
 	}
 
 	/**
