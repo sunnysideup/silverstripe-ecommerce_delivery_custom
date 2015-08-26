@@ -1,225 +1,39 @@
 <?php
 
-/**
- * @author Nicolaas [at] sunnysideup.co.nz
- * @package: ecommerce
- * @sub-package: examples
- * @description: This is an example modifier that developers can use
- * as a starting point for writing their own modifiers.
- *
- **/
-class EcommerceCustomDeliveryModifier extends OrderModifier {
+class EcommerceCustomDeliveryPostalCode extends DataObject {
 
-// ######################################## *** model defining static variables (e.g. $db, $has_one)
-
-	/**
-	 * add extra fields as you need them.
-	 *
-	 **/
-	public static $db = array(
-		"PostalCode" => "Varchar(10)",
-		"HasSpecialProducts" => "Boolean(1)"
+	private static $db = array(
+		'Title' => 'Varchar(255)',
+		'PostalCodeLowestNumber' => 'Int',
+		'PostalCodeHighestNumber' => 'Int',
+		'PriceWithoutApplicableProducts' => 'Currency',
+		'PriceWithApplicableProducts' => 'Currency'
 	);
 
+	private static $singular_name = "Postal Code Special Delivery Zone";
 
-// ######################################## *** cms variables + functions (e.g. getCMSFields, $searchableFields)
+	private static $belongs_many_many = array(
+		"EcommerceDBConfigs" => "EcommerceDBConfig"
+	);
 
-	/**
-	 * standard SS method
-	 */
-	function getCMSFields() {
+	private static $summary_fields = array(
+		'Title' => 'Title',
+		'PostalCodeLowestNumber' => 'Postal Code From ',
+		'PostalCodeHighestNumber' => 'Postal Code To',
+		'PriceWithoutApplicableProducts' => 'w/out Special Products',
+		'PriceWithApplicableProducts' => 'w/ Special Products'
+	);
+	private static $field_labels = array(
+		'PostalCodeLowestNumber' => 'Lowest postal code (e.g. 2011)',
+		'PostalCodeHighestNumber' => 'Highest postal code (e.g. 2015)',
+		'PriceWithoutApplicableProducts' => 'Delivery charge for orders without special products',
+		'PriceWithApplicableProducts' => 'Delivery charge for orders with special products'
+	);
+
+	function getCMSFields(){
 		$fields = parent::getCMSFields();
+		$fields->removeFieldFromTab("Root", "EcommerceDBConfigs");
 		return $fields;
 	}
-
-	public static $singular_name = "Delivery Charge";
-		function i18n_singular_name() { return self::$singular_name;}
-
-	public static $plural_name = "Delivery Charges";
-		function i18n_plural_name() { return self::$plural_name;}
-
-// ######################################## *** other (non) static variables (e.g. protected static $special_name_for_something, protected $order)
-
-
-// ######################################## *** CRUD functions (e.g. canEdit)
-// ######################################## *** init and update functions
-
-	/**
-	 * For all modifers with their own database fields, we need to include this...
-	 * It will update each of the fields.
-	 * Within this method, we need to create the methods
-	 * Live{functionName}
-	 * e.g LiveMyField() and LiveMyReduction() in this case...
-	 * The OrderModifier already updates the basic database fields.
-	 * @param Bool $force - run it, even if it has run already
-	 */
-	public function runUpdate($force = false) {
-		$this->checkField("PostalCode");
-		$this->checkField("HasSpecialProducts");
-		parent::runUpdate($force);
-	}
-
-
-// ######################################## *** form functions (e. g. Showform and getform)
-
-	/**
-	 * standard OrderModifier Method
-	 * Should we show a form in the checkout page for this modifier?
-	 */
-	public function ShowForm() {
-		return false;
-	}
-
-	/**
-	 * Should the form be included in the editable form
-	 * on the checkout page?
-	 * @return Boolean
-	 */
-	public function ShowFormInEditableOrderTable() {
-		return false;
-	}
-
-	/**
-	 * Should the form be included in the editable form
-	 * on the checkout page?
-	 * @return Boolean
-	 */
-	public function ShowFormOutsideEditableOrderTable() {
-		return false;
-	}
-
-// ######################################## *** template functions (e.g. ShowInTable, TableTitle, etc...) ... USES DB VALUES
-
-	/**
-	 * standard OrderModifer Method
-	 * Tells us if the modifier should take up a row in the table on the checkout page.
-	 * @return Boolean
-	 */
-	public function ShowInTable() {
-		return $this->PostalCode ? true : false;
-	}
-
-	/**
-	 * standard OrderModifer Method
-	 * Tells us if the modifier can be removed (hidden / turned off) from the order.
-	 * @return Boolean
-	 */
-	public function CanBeRemoved() {
-		return false;
-	}
-
-// ######################################## ***  inner calculations.... USES CALCULATED VALUES
-
-
-
-// ######################################## *** calculate database fields: protected function Live[field name]  ... USES CALCULATED VALUES
-
-	/**
-	 * if we want to change the default value for the Name field
-	 * (defined in the OrderModifer class) then we can do this
-	 * as shown in the method below.
-	 * You may choose to return an empty string or just a standard message.
-	 **/
-	protected function LiveName() {
-		return EcommerceDBConfig::current_ecommerce_db_config()->DeliveryChargeTitle." (postal code: ".$this->LivePostalCode().")";
-	}
-
-	protected function LiveCalculatedTotal() {
-		$nonSpecialCount =  $this->LiveHasSpecialProducts(false);
-		$specialCount =  $this->LiveHasSpecialProducts(true);
-		$postalCodeObject =  $this->MyPostalCodeObject();
-		if(!$postalCodeObject) {
-			$postalCodeObject = EcommerceDBConfig::current_ecommerce_db_config();
-		}
-		return
-			($postalCodeObject->PriceWithoutApplicableProducts * $nonSpecialCount) +
-			($postalCodeObject->PriceWithApplicableProducts * $specialCount);
-	}
-
-
-
-// ######################################## *** Type Functions (IsChargeable, IsDeductable, IsNoChange, IsRemoved)
-
-
-
-// ######################################## *** standard database related functions (e.g. onBeforeWrite, onAfterWrite, etc...)
-
-	function onBeforeWrite() {
-		parent::onBeforeWrite();
-	}
-
-// ######################################## *** debug functions
-
-	/**
-	 * @return int
-	 */
-	function ProductCountForTotal($special = false){
-		$count = 0;
-		$applicableProducts = $this->SelectedProductsArray();
-		if(count($applicableProducts)) {
-			$order = $this->Order();
-			if($order) {
-				foreach($order->OrderItems() as $item) {
-					if()
-					if($special && in_array($item->Product()->ID, $applicableProducts)) {
-						$count += $item->Quantity;
-					}
-					else {
-						$count += $item->Quantity;
-					}
-				}
-			}
-		}
-		return $count;
-	}
-
-	/**
-	 *
-	 * @return String
-	 */
-	function LivePostalCode(){
-		$postalCode = "";
-		$order = $this->Order();
-		if($order) {
-			$shippingAddress = $order->CreateOrReturnExistingAddress("ShippingAddress");
-			$postalCode = $shippingAddress->ShippingPostalCode;
-			if(!$postalCode) {
-				$billingAddress = $order->CreateOrReturnExistingAddress("BillingAddress");
-				$postalCode = $billingAddress->PostalCode;
-			}
-		}
-		if(intval($postalCode) > 0) {
-			return $postalCode;
-		}
-		return "";
-	}
-
-
-	/**
-	 *
-	 * @array
-	 */
-	private function SelectedProductsArray(){
-		$ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
-		return $ecommerceConfig->DeliverySpecialChargedProducts()->map("ID", "ID")->toArray();
-	}
-
-	/**
-	 *
-	 * @return EcommerceCustomDeliveryPostalCode | null
-	 */
-	private function MyPostalCodeObject(){
-		$ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
-		$postalCode = intval($this->LivePostalCode());
-		if($postalCode) {
-			return $ecommerceConfig->SpecialPricePostalCodes()
-				->where(
-					"$postalCode >= \"PostalCodeLowestNumber\" AND $postalCode <= \"PostalCodeHighestNumber\" "
-				)->First();
-		}
-		return null;
-	}
-
-
 
 }
