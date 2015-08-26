@@ -3,7 +3,7 @@
 	"type": "silverstripe-module",
 	"description": "basic implementation of a zip by zipcode delivery charge",
 	"homepage": "http://www.silverstripe-ecommerce.com",
-	"keywords": ["ecommerce", "e-commerce", "shop", "modifier_example", "delivery", "postal code", "zip code"],
+	"keywords": ["ecommerce", "e-commerce", "shop", "modifier example", "delivery", "postal code", "zip code", "handling charges"],
 	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
 	"authors":[
 		{
