@@ -160,7 +160,6 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 			$order = $this->Order();
 			if($order) {
 				foreach($order->OrderItems() as $item) {
-					if()
 					if($special && in_array($item->Product()->ID, $applicableProducts)) {
 						$count += $item->Quantity;
 					}
