@@ -18,7 +18,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 **/
 	public static $db = array(
 		"PostalCode" => "Varchar(10)",
-		"SpecialProductCount" => "Int"
+		"SpecialProductCount" => "Int",
 		"NonSpecialProductCount" => "Int"
 	);
 
