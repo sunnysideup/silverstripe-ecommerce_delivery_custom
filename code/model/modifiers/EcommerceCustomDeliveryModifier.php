@@ -18,7 +18,8 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 **/
 	public static $db = array(
 		"PostalCode" => "Varchar(10)",
-		"HasSpecialProducts" => "Boolean(1)"
+		"SpecialProductCount" => "Int"
+		"NonSpecialProductCount" => "Int"
 	);
 
 
@@ -55,7 +56,8 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 */
 	public function runUpdate($force = false) {
 		$this->checkField("PostalCode");
-		$this->checkField("HasSpecialProducts");
+		$this->checkField("SpecialProductCount");
+		$this->checkField("NonSpecialProductCount");
 		parent::runUpdate($force);
 	}
 
@@ -149,6 +151,14 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	}
 
 // ######################################## *** debug functions
+
+	function LiveNonSpecialProductCount(){
+		return $this->ProductCountForTotal(false);
+	}
+
+	function LiveSpecialProductCount(){
+		return $this->ProductCountForTotal(true);
+	}
 
 	/**
 	 * @return int
