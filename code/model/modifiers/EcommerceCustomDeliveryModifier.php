@@ -128,11 +128,11 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 
 	protected function LiveCalculatedTotal() {
 		$nonSpecialCount =  $this->LiveNonSpecialProductCount();
-		$specialCount =  $this->LiveSpecialProductCount();
 		$postalCodeObject =  $this->MyPostalCodeObject();
 		if(!$postalCodeObject) {
 			$postalCodeObject = EcommerceDBConfig::current_ecommerce_db_config();
 		}
+		$specialCount =  $this->LiveSpecialProductCount();
 		return
 			($postalCodeObject->PriceWithoutApplicableProducts * $nonSpecialCount) +
 			($postalCodeObject->PriceWithApplicableProducts * $specialCount);
@@ -164,22 +164,28 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 * @return int
 	 */
 	protected function ProductCountForTotal($special = false){
-		$count = 0;
+		$specialCount = 0;
+		$nonSpecialCount = 0;
 		$applicableProducts = $this->SelectedProductsArray();
 		if(count($applicableProducts)) {
 			$order = $this->Order();
 			if($order) {
 				foreach($order->OrderItems() as $item) {
 					if($special && in_array($item->Product()->ID, $applicableProducts)) {
-						$count += $item->Quantity;
+						$specialCount += $item->Quantity;
 					}
 					else {
-						$count += $item->Quantity;
+						$nonSpecialCount += $item->Quantity;
 					}
 				}
 			}
 		}
-		return $count;
+		if($special) {
+			return $specialCount;
+		}
+		else {
+			return $nonSpecialCount;
+		}
 	}
 
 	/**
