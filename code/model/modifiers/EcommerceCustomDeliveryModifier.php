@@ -123,7 +123,21 @@ class EcommerceCustomDeliveryModifier extends OrderModifier {
 	 * You may choose to return an empty string or just a standard message.
 	 **/
 	protected function LiveName() {
-		return EcommerceDBConfig::current_ecommerce_db_config()->DeliveryChargeTitle." (postal code: ".$this->LivePostalCode().")";
+		if($obj = $this->MyPostalCodeObject()) {
+			$title = $obj->Title;
+		}
+		else {
+			$title = EcommerceDBConfig::current_ecommerce_db_config()->DeliveryChargeTitle;
+		}
+		if($postalCode = $this->LivePostalCode()) {
+			if($postalCodeLabel = _t("EcommerceCustomDeliveryModifier.POSTAL_CODE", "postal code")) {
+				$title .= " (".$postalCodeLabel.": ".$postalCode.")";
+			}
+		}
+		else {
+			//do nothing...
+		}
+		return $title;
 	}
 
 	protected function LiveCalculatedTotal() {
