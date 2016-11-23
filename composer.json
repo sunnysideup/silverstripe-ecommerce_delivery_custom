@@ -3,6 +3,9 @@
     "type": "silverstripe-module",
     "description": "basic implementation of a zip by zipcode delivery charge",
     "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
         "ecommerce",
         "e-commerce",
         "shop",
@@ -21,6 +24,8 @@
         }
     ],
     "require": {
-        "sunnysideup/ecommerce": "*"
+        "sunnysideup/ecommerce": "*",
+        "silverstripe/framework": "~3.1",
+        "silverstripe/cms": "~3.1"
     }
 }
