@@ -1,7 +1,11 @@
 ---
 Name: ecommerce_custom_delivery
 Before: 'mysite/*'
-After: 'framework/*','cms/*', 'ecommerce/*'
+After: 
+  - 'framework/*'
+  - 'cms/*'
+  -  'ecommerce/*'
+
 ---
 
 EcommerceDBConfig:
