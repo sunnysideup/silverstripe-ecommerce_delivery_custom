@@ -1,23 +1,18 @@
----
-Name: ecommerce_custom_delivery
-Before: 'mysite/*'
-After: 
-  - 
+---
+Name: ecommerce_custom_delivery
+Before: 'mysite/*'
+After: 'framework/*','cms/*', 'ecommerce/*'
+---
 
-  - 'framework/*'
-  - 'cms/*'
-  -  'ecommerce/*'
-
----
-
-EcommerceDBConfig:
-  extensions:
-    - EcommerceCustomDeliveryEcommerceDBConfigExtension
-
-Product:
-  belongs_many_many:
-    EcommerceDBConfig: EcommerceDBConfig
-
-Order:
-  modifiers:
-    - EcommerceCustomDeliveryModifier
+EcommerceDBConfig:
+  extensions:
+    - EcommerceCustomDeliveryEcommerceDBConfigExtension
+
+Product:
+  belongs_many_many:
+    EcommerceDBConfig: EcommerceDBConfig
+
+Order:
+  modifiers:
+    - EcommerceCustomDeliveryModifier
+
