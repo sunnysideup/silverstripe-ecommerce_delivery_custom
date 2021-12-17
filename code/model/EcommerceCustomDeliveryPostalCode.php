@@ -20,8 +20,8 @@ class EcommerceCustomDeliveryPostalCode extends DataObject
         'Title' => 'Title',
         'PostalCodeLowestNumber' => 'Postal Code From ',
         'PostalCodeHighestNumber' => 'Postal Code To',
-        'PriceWithoutApplicableProducts' => 'w/out Special Products',
-        'PriceWithApplicableProducts' => 'w/ Special Products'
+        'PriceWithoutApplicableProducts' => 'Without Special Products',
+        'PriceWithApplicableProducts' => 'With Special Products'
     );
     private static $field_labels = array(
         'PostalCodeLowestNumber' => 'Lowest postal code (e.g. 2011)',
