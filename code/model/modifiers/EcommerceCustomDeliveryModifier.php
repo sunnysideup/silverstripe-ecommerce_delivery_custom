@@ -164,7 +164,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
 
         }
         $specialPrice = $postalCodeObjectOrDefaultConfig->PriceWithApplicableProducts;
-        $nonSpecialPrice = $postalCodeObjectOrDefaultConfig->PriceWithoutApplicableProduct;
+        $nonSpecialPrice = $postalCodeObjectOrDefaultConfig->PriceWithoutApplicableProducts;
         if ($specialCount) {
             return $specialPrice;    
         } else {
