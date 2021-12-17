@@ -155,15 +155,21 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
 
     protected function LiveCalculatedTotal()
     {
-        $nonSpecialCount =  $this->LiveNonSpecialProductCount();
-        $postalCodeObject =  $this->MyPostalCodeObject();
-        if (!$postalCodeObject) {
-            $postalCodeObject = EcommerceDBConfig::current_ecommerce_db_config();
-        }
         $specialCount =  $this->LiveSpecialProductCount();
-        return
-            ($postalCodeObject->PriceWithoutApplicableProducts * $nonSpecialCount) +
-            ($postalCodeObject->PriceWithApplicableProducts * $specialCount);
+        $nonSpecialCount =  $this->LiveNonSpecialProductCount();
+        
+        $postalCodeObject =  $this->MyPostalCodeObject();
+        if (! $postalCodeObject) {
+            $postalCodeObjectOrDefaultConfig = EcommerceDBConfig::current_ecommerce_db_config();
+
+        }
+        $specialPrice = $postalCodeObjectOrDefaultConfig->PriceWithApplicableProducts;
+        $nonSpecialPrice = $postalCodeObjectOrDefaultConfig->PriceWithoutApplicableProduct;
+        if ($specialCount) {
+            return $specialPrice    
+        } elseif ($nonSpecialCount) {
+            return $nonSpecialPrice;
+        }
     }
 
 
