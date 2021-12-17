@@ -158,8 +158,8 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         $specialCount =  $this->LiveSpecialProductCount();
         $nonSpecialCount =  $this->LiveNonSpecialProductCount();
         
-        $postalCodeObject =  $this->MyPostalCodeObject();
-        if (! $postalCodeObject) {
+        $postalCodeObjectOrDefaultConfig =  $this->MyPostalCodeObject();
+        if (! $postalCodeObjectOrDefaultConfig) {
             $postalCodeObjectOrDefaultConfig = EcommerceDBConfig::current_ecommerce_db_config();
 
         }
@@ -170,6 +170,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         } elseif ($nonSpecialCount) {
             return $nonSpecialPrice;
         }
+        return 0;
     }
 
 
