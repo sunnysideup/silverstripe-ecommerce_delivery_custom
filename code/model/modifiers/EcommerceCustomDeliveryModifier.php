@@ -111,7 +111,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      */
     public function ShowInTable()
     {
-        return $this->PostalCode ? true : false;
+        return true;
     }
 
     /**
