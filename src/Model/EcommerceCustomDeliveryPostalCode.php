@@ -11,13 +11,7 @@ use SilverStripe\ORM\DataObject;
 class EcommerceCustomDeliveryPostalCode extends DataObject
 {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * OLD: private static $db
-  * EXP: Check that is class indeed extends DataObject and that it is not a data-extension!
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-    
+
     private static $table_name = 'EcommerceCustomDeliveryPostalCode';
 
     private static $db = array(
@@ -55,4 +49,3 @@ class EcommerceCustomDeliveryPostalCode extends DataObject
         return $fields;
     }
 }
-
