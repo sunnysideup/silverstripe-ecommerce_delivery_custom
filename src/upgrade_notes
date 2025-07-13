@@ -386,3 +386,150 @@ To continue, please use the following parameter: startFrom=InspectAPIChanges-1
 e.g. php runme.php startFrom=InspectAPIChanges-1
 ------------------------------------------------------------------------
             
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/upgradeto4
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src  --root-dir=/var/www/upgrades/upgradeto4 --write -vvv
+Array
+(
+    [0] => Running post-upgrade on "/var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src"
+    [1] => [2025-07-14 08:07:46] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryPostalCode.php...
+    [2] => PHP Fatal error:  Uncaught TypeError: Argument 1 passed to PhpParser\NodeTraverser::traverse() must be of the type array, null given, called in /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php on line 47 and defined in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:76
+    [3] => Stack trace:
+    [4] => #0 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php(47): PhpParser\NodeTraverser->traverse()
+    [5] => #1 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php(34): PHPStan\Parser\DirectParser->parseString()
+    [6] => #2 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/CachedParser.php(29): PHPStan\Parser\DirectParser->parseFile()
+    [7] => #3 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php(110): PHPStan\Parser\CachedParser->parseFile()
+    [8] => #4 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php(81): PHPStan\Type\FileTypeMapper->createResolvedPhpDocMap()
+    [9] => #5 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php(61): PH in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php on line 76
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/upgradeto4
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src  --root-dir=/var/www/upgrades/upgradeto4 --write -vvv
+Array
+(
+    [0] => Running post-upgrade on "/var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src"
+    [1] => [2025-07-14 08:08:23] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryPostalCode.php...
+    [2] => PHP Fatal error:  Uncaught TypeError: Argument 1 passed to PhpParser\NodeVisitor\NameResolver::beforeTraverse() must be of the type array, null given, called in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php on line 84 and defined in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeVisitor/NameResolver.php:42
+    [3] => Stack trace:
+    [4] => #0 /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php(84): PhpParser\NodeVisitor\NameResolver->beforeTraverse()
+    [5] => #1 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php(47): PhpParser\NodeTraverser->traverse()
+    [6] => #2 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php(34): PHPStan\Parser\DirectParser->parseString()
+    [7] => #3 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/CachedParser.php(29): PHPStan\Parser\DirectParser->parseFile()
+    [8] => #4 /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php(110): PHPStan\Parser\CachedParser->parseFile()
+    [9] => #5 /var/www/ss3/upgrader/vendor/phpstan/phpstan in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeVisitor/NameResolver.php on line 42
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/upgradeto4
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src  --root-dir=/var/www/upgrades/upgradeto4 --write -vvv
+Array
+(
+    [0] => Running post-upgrade on "/var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src"
+    [1] => [2025-07-14 08:08:41] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryPostalCode.php...
+    [2] => [2025-07-14 08:08:41] Applying UpdateVisibilityRule to EcommerceCustomDeliveryPostalCode.php...
+    [3] => [2025-07-14 08:08:41] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryModifier.php...
+    [4] => 
+    [5] => In Php7.php line 1170:
+    [6] => 
+    [7] =>   [PhpParser\Error]
+    [8] =>   A trailing comma is not allowed here on line 823
+    [9] => 
+    [10] => 
+    [11] => Exception trace:
+    [12] =>   at /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Parser/Php7.php:1170
+    [13] =>  PhpParser\Parser\Php7->reduceRule88() at /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php:268
+    [14] =>  PhpParser\ParserAbstract->parse() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php:43
+    [15] =>  PHPStan\Parser\DirectParser->parseString() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/DirectParser.php:34
+    [16] =>  PHPStan\Parser\DirectParser->parseFile() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Parser/CachedParser.php:29
+    [17] =>  PHPStan\Parser\CachedParser->parseFile() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php:110
+    [18] =>  PHPStan\Type\FileTypeMapper->createResolvedPhpDocMap() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php:81
+    [19] =>  PHPStan\Type\FileTypeMapper->getResolvedPhpDocMap() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Type/FileTypeMapper.php:61
+    [20] =>  PHPStan\Type\FileTypeMapper->getResolvedPhpDoc() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Reflection/Annotations/AnnotationsMethodsClassReflectionExtension.php:72
+    [21] =>  PHPStan\Reflection\Annotations\AnnotationsMethodsClassReflectionExtension->createMethods() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Reflection/Annotations/AnnotationsMethodsClassReflectionExtension.php:27
+    [22] =>  PHPStan\Reflection\Annotations\AnnotationsMethodsClassReflectionExtension->hasMethod() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Reflection/Php/PhpClassReflectionExtension.php:199
+    [23] =>  PHPStan\Reflection\Php\PhpClassReflectionExtension->createMethod() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Reflection/Php/PhpClassReflectionExtension.php:167
+    [24] =>  PHPStan\Reflection\Php\PhpClassReflectionExtension->getMethod() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Reflection/ClassReflection.php:170
+    [25] =>  PHPStan\Reflection\ClassReflection->getMethod() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/Scope.php:651
+    [26] =>  PHPStan\Analyser\Scope->resolveType() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/Scope.php:323
+    [27] =>  PHPStan\Analyser\Scope->getType() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Rules/Arrays/IterableInForeachRule.php:34
+    [28] =>  PHPStan\Rules\Arrays\IterableInForeachRule->processNode() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/UpgradeRule/PHP/Visitor/PHPStanScopeVisitor.php:80
+    [29] =>  SilverStripe\Upgrader\UpgradeRule\PHP\Visitor\PHPStanScopeVisitor->SilverStripe\Upgrader\UpgradeRule\PHP\Visitor\{closure}() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:316
+    [30] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [31] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:475
+    [32] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [33] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:475
+    [34] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [35] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:699
+    [36] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [37] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:699
+    [38] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [39] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:699
+    [40] =>  PHPStan\Analyser\NodeScopeResolver->processNode() at /var/www/ss3/upgrader/vendor/phpstan/phpstan/src/Analyser/NodeScopeResolver.php:176
+    [41] =>  PHPStan\Analyser\NodeScopeResolver->processNodes() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/UpgradeRule/PHP/Visitor/PHPStanScopeVisitor.php:82
+    [42] =>  SilverStripe\Upgrader\UpgradeRule\PHP\Visitor\PHPStanScopeVisitor->enterNode() at /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:168
+    [43] =>  PhpParser\NodeTraverser->traverseArray() at /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:92
+    [44] =>  PhpParser\NodeTraverser->traverse() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/UpgradeRule/PHP/PHPUpgradeRule.php:28
+    [45] =>  SilverStripe\Upgrader\UpgradeRule\PHP\PHPUpgradeRule->transformWithVisitors() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/UpgradeRule/PHP/ApiChangeWarningsRule.php:88
+    [46] =>  SilverStripe\Upgrader\UpgradeRule\PHP\ApiChangeWarningsRule->mutateSourceWithVisitors() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/UpgradeRule/PHP/ApiChangeWarningsRule.php:60
+    [47] =>  SilverStripe\Upgrader\UpgradeRule\PHP\ApiChangeWarningsRule->upgradeFile() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Upgrader.php:61
+    [48] =>  SilverStripe\Upgrader\Upgrader->upgrade() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/src/Console/InspectCommand.php:88
+    [49] =>  SilverStripe\Upgrader\Console\InspectCommand->execute() at /var/www/ss3/upgrader/vendor/symfony/console/Command/Command.php:255
+    [50] =>  Symfony\Component\Console\Command\Command->run() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:1021
+    [51] =>  Symfony\Component\Console\Application->doRunCommand() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:275
+    [52] =>  Symfony\Component\Console\Application->doRun() at /var/www/ss3/upgrader/vendor/symfony/console/Application.php:149
+    [53] =>  Symfony\Component\Console\Application->run() at /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code:55
+    [54] => 
+    [55] => inspect [-d|--root-dir ROOT-DIR] [-w|--write] [--skip-visibility] [--] <path>
+    [56] => 
+)
+
+
+------------------------------------------------------------------------
+To continue, please use the following parameter: startFrom=InspectAPIChanges-1
+e.g. php runme.php startFrom=InspectAPIChanges-1
+------------------------------------------------------------------------
+            
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/upgradeto4
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src  --root-dir=/var/www/upgrades/upgradeto4 --write -vvv
+Writing changes for 0 files
+Running post-upgrade on "/var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src"
+[2025-07-14 08:09:21] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryPostalCode.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:09:21] Applying UpdateVisibilityRule to EcommerceCustomDeliveryPostalCode.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:09:21] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryModifier.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:09:21] Applying UpdateVisibilityRule to EcommerceCustomDeliveryModifier.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:09:21] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryEcommerceDBConfigExtension.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:09:21] Applying UpdateVisibilityRule to EcommerceCustomDeliveryEcommerceDBConfigExtension.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+Writing changes for 0 files
+✔✔✔
