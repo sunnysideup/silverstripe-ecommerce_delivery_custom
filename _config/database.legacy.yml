@@ -1,0 +1,5 @@
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    EcommerceCustomDeliveryPostalCode: Sunnysideup\EcommerceDeliveryCustom\Model\EcommerceCustomDeliveryPostalCode
+    EcommerceCustomDeliveryModifier: Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers\EcommerceCustomDeliveryModifier
+    EcommerceCustomDeliveryEcommerceDBConfigExtension: Sunnysideup\EcommerceDeliveryCustom\Extensions\EcommerceCustomDeliveryEcommerceDBConfigExtension
