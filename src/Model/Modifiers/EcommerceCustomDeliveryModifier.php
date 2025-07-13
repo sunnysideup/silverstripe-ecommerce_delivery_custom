@@ -22,6 +22,8 @@ use Sunnysideup\Ecommerce\Model\OrderModifier;
 class EcommerceCustomDeliveryModifier extends OrderModifier
 {
 
+    private static $table_name = "EcommerceCustomDeliveryModifier";
+
     // ######################################## *** model defining static variables (e.g. $db, $has_one)
 
     /**
