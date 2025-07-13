@@ -1,6 +1,6 @@
 ---
 Name: ecommerce_custom_delivery
-Before: 'mysite/*'
+Before: 'app/*'
 After: 'framework/*','cms/*', 'ecommerce/*'
 ---
 
