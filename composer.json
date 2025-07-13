@@ -27,7 +27,5 @@
         "sunnysideup/ecommerce": "*",
         "silverstripe/recipe-cms": "*"
     },
-    "extra": {
-        "installer-name": "ecommerce_delivery_custom"
-    }
+    "extra": []
 }
