@@ -1,7 +1,5 @@
 ---
 Name: ecommerce_custom_delivery
-Before: 'app/*'
-After: 'framework/*','cms/*', 'ecommerce/*'
 ---
 Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig:
   extensions:

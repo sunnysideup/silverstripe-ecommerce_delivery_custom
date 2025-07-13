@@ -22,20 +22,20 @@ use Sunnysideup\Ecommerce\Model\OrderModifier;
 class EcommerceCustomDeliveryModifier extends OrderModifier
 {
 
-// ######################################## *** model defining static variables (e.g. $db, $has_one)
+    // ######################################## *** model defining static variables (e.g. $db, $has_one)
 
     /**
      * add extra fields as you need them.
      *
      **/
-    public static $db = array(
+    private static $db = array(
         "PostalCode" => "Varchar(10)",
         "SpecialProductCount" => "Int",
         "NonSpecialProductCount" => "Int"
     );
 
 
-// ######################################## *** cms variables + functions (e.g. getCMSFields, $searchableFields)
+    // ######################################## *** cms variables + functions (e.g. getCMSFields, $searchableFields)
 
     /**
      * standard SS method
@@ -46,23 +46,23 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         return $fields;
     }
 
-    public static $singular_name = "Delivery Charge";
+    private static $singular_name = "Delivery Charge";
     public function i18n_singular_name()
     {
         return self::$singular_name;
     }
 
-    public static $plural_name = "Delivery Charges";
+    private static $plural_name = "Delivery Charges";
     public function i18n_plural_name()
     {
         return self::$plural_name;
     }
 
-// ######################################## *** other (non) static variables (e.g. protected static $special_name_for_something, protected $order)
+    // ######################################## *** other (non) static variables (e.g. protected static $special_name_for_something, protected $order)
 
 
-// ######################################## *** CRUD functions (e.g. canEdit)
-// ######################################## *** init and update functions
+    // ######################################## *** CRUD functions (e.g. canEdit)
+    // ######################################## *** init and update functions
 
     /**
      * For all modifers with their own database fields, we need to include this...
@@ -82,13 +82,13 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     }
 
 
-// ######################################## *** form functions (e. g. Showform and getform)
+    // ######################################## *** form functions (e. g. Showform and getform)
 
     /**
      * standard OrderModifier Method
      * Should we show a form in the checkout page for this modifier?
      */
-    public function ShowForm()
+    public function ShowForm(): bool
     {
         return false;
     }
@@ -98,7 +98,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      * on the checkout page?
      * @return Boolean
      */
-    public function ShowFormInEditableOrderTable()
+    public function ShowFormInEditableOrderTable(): bool
     {
         return false;
     }
@@ -113,14 +113,14 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         return false;
     }
 
-// ######################################## *** template functions (e.g. ShowInTable, TableTitle, etc...) ... USES DB VALUES
+    // ######################################## *** template functions (e.g. ShowInTable, TableTitle, etc...) ... USES DB VALUES
 
     /**
      * standard OrderModifer Method
      * Tells us if the modifier should take up a row in the table on the checkout page.
      * @return Boolean
      */
-    public function ShowInTable()
+    public function ShowInTable(): bool
     {
         return true;
     }
@@ -130,16 +130,16 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      * Tells us if the modifier can be removed (hidden / turned off) from the order.
      * @return Boolean
      */
-    public function CanBeRemoved()
+    public function CanBeRemoved(): bool
     {
         return false;
     }
 
-// ######################################## ***  inner calculations.... USES CALCULATED VALUES
+    // ######################################## ***  inner calculations.... USES CALCULATED VALUES
 
 
 
-// ######################################## *** calculate database fields: protected function Live[field name]  ... USES CALCULATED VALUES
+    // ######################################## *** calculate database fields: protected function Live[field name]  ... USES CALCULATED VALUES
 
     /**
      * if we want to change the default value for the Name field
@@ -156,7 +156,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         }
         if ($postalCode = $this->LivePostalCode()) {
             if ($postalCodeLabel = _t("EcommerceCustomDeliveryModifier.POSTAL_CODE", "postal code")) {
-                $title .= " (".$postalCodeLabel.": ".$postalCode.")";
+                $title .= " (" . $postalCodeLabel . ": " . $postalCode . ")";
             }
         } else {
             //do nothing...
@@ -168,16 +168,15 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     {
         $specialCount =  $this->LiveSpecialProductCount();
         $nonSpecialCount =  $this->LiveNonSpecialProductCount();
-        
+
         $postalCodeObjectOrDefaultConfig =  $this->MyPostalCodeObject();
         if (! $postalCodeObjectOrDefaultConfig) {
             $postalCodeObjectOrDefaultConfig = EcommerceDBConfig::current_ecommerce_db_config();
-
         }
         $specialPrice = $postalCodeObjectOrDefaultConfig->PriceWithApplicableProducts;
         $nonSpecialPrice = $postalCodeObjectOrDefaultConfig->PriceWithoutApplicableProducts;
         if ($specialCount) {
-            return $specialPrice;    
+            return $specialPrice;
         } else {
             return $nonSpecialPrice;
         }
@@ -186,18 +185,18 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
 
 
 
-// ######################################## *** Type Functions (IsChargeable, IsDeductable, IsNoChange, IsRemoved)
+    // ######################################## *** Type Functions (IsChargeable, IsDeductable, IsNoChange, IsRemoved)
 
 
 
-// ######################################## *** standard database related functions (e.g. onBeforeWrite, onAfterWrite, etc...)
+    // ######################################## *** standard database related functions (e.g. onBeforeWrite, onAfterWrite, etc...)
 
     public function onBeforeWrite()
     {
         parent::onBeforeWrite();
     }
 
-// ######################################## *** debug functions
+    // ######################################## *** debug functions
 
     public function LiveNonSpecialProductCount()
     {
@@ -286,4 +285,3 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         return null;
     }
 }
-
