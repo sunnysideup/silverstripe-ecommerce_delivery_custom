@@ -37,3 +37,4 @@ class EcommerceCustomDeliveryPostalCode extends DataObject
         return $fields;
     }
 }
+
