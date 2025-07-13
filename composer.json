@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/ecommerce_delivery_custom",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "basic implementation of a zip by zipcode delivery charge",
     "keywords": [
         "Silverstripe-CMS",
