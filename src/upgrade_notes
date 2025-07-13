@@ -533,3 +533,34 @@ PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-p
 PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
 Writing changes for 0 files
 ✔✔✔
+# running php upgrade inspect see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/upgradeto4
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code inspect /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src  --root-dir=/var/www/upgrades/upgradeto4 --write -vvv
+Writing changes for 0 files
+Running post-upgrade on "/var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src"
+[2025-07-14 08:10:49] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryPostalCode.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:10:49] Applying UpdateVisibilityRule to EcommerceCustomDeliveryPostalCode.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:10:49] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryModifier.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:10:49] Applying UpdateVisibilityRule to EcommerceCustomDeliveryModifier.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:10:49] Applying ApiChangeWarningsRule to EcommerceCustomDeliveryEcommerceDBConfigExtension.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+[2025-07-14 08:10:49] Applying UpdateVisibilityRule to EcommerceCustomDeliveryEcommerceDBConfigExtension.php...
+PHP Warning:  Undefined array key 265 in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/Lexer.php on line 258
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 194
+PHP Warning:  Undefined array key "" in /var/www/ss3/upgrader/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php on line 367
+Writing changes for 0 files
+✔✔✔
