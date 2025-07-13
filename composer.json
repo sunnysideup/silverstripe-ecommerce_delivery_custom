@@ -1,36 +1,36 @@
 {
-    "name": "sunnysideup/ecommerce_delivery_custom",
-    "type": "silverstripe-vendormodule",
-    "description": "basic implementation of a zip by zipcode delivery charge",
-    "keywords": [
-        "Silverstripe-CMS",
-        "CMS",
-        "Silverstripe",
-        "ecommerce",
-        "e-commerce",
-        "shop",
-        "modifier example",
-        "delivery",
-        "postal code",
-        "zip code",
-        "handling charges"
-    ],
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Nicolaas Francken",
-            "email": "modules@sunnysideup.co.nz",
-            "role": "lead developer"
-        }
-    ],
-    "require": {
-        "sunnysideup/ecommerce": "*",
-        "silverstripe/recipe-cms": "*"
-    },
-    "extra": [],
-    "autoload": {
-        "psr-4": {
-            "Sunnysideup\\EcommerceDeliveryCustom\\": "src/"
-        }
+  "name": "sunnysideup/ecommerce_delivery_custom",
+  "type": "silverstripe-vendormodule",
+  "description": "basic implementation of a zip by zipcode delivery charge",
+  "keywords": [
+    "Silverstripe-CMS",
+    "CMS",
+    "Silverstripe",
+    "ecommerce",
+    "e-commerce",
+    "shop",
+    "modifier example",
+    "delivery",
+    "postal code",
+    "zip code",
+    "handling charges"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Nicolaas Francken",
+      "email": "modules@sunnysideup.co.nz",
+      "role": "lead developer"
     }
+  ],
+  "require": {
+    "sunnysideup/ecommerce": "*",
+    "silverstripe/recipe-cms": "^4 || ^5"
+  },
+  "extra": [],
+  "autoload": {
+    "psr-4": {
+      "Sunnysideup\\EcommerceDeliveryCustom\\": "src/"
+    }
+  }
 }
