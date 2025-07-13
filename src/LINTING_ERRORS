@@ -1,0 +1,316 @@
+fatal: not a git repository (or any of the parent directories): .git
+ [0;33m# remove origs [0m
+fatal: not a git repository (or any of the parent directories): .git
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: /var/www/upgrades/upgradeto4/app/src IS NOT A GIT REPO so I can not commit the changes. [0m
+[1;32;44m ---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch upgrades/automatedbranch/3to4
+Your branch is up to date with 'origin/upgrades/automatedbranch/3to4'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	LINTING_ERRORS
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+567b6e5
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+====================================================
+ SELF-UPDATING (this happens from time to time)
+====================================================
+
+
+
+====================================================
+ UPDATING IN:
+ /home/ssu/.config/composer
+====================================================
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+c8d5d8f
+Fetching origin
+Fetching composer
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mChanges are within acceptable limits, no need for a review. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: automated commit[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: master[0m
+ [0;33m---------------------------------------- [0m
+Everything up-to-date
+From https://github.com/sunnysideup/silverstripe-easy-coding-standards
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ [0;33m---------------------------------------- [0m
+ [0;32m # ALL COMMITTED [0m
+ [0;32m # ALL PUSHED [0m
+ [0;33m---------------------------------------- [0m
+Fetching origin
+Fetching composer
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mBRANCH: master [0m
+ [0;33mCURRENT TAG: 20.4.2 [0m
+ [0;33mCHECKING COMMIT: MNT: automated commit [0m
+ [0;33mNEW TAG: none required [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+/home/ssu/.config/composer
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - exakat/exakat is locked to version v2.6.1 and an update of this package was not requested.
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+  Problem 2
+    - phan/phan is locked to version 5.5.0 and an update of this package was not requested.
+    - phan/phan 5.5.0 requires symfony/console ^3.2|^4.0|^5.0|^6.0|^7.0 -> satisfiable by symfony/console[v7.3.1].
+    - symfony/console v7.3.1 requires php >=8.2 -> your php version (8.1.32) does not satisfy that requirement.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires exakat/exakat ^2.6 -> satisfiable by exakat/exakat[v2.6.1].
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Easy to update[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Directly required packages out of date in composer.lock[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mPlenty of changes! (304 lines changed across 1 files) [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: removing orig files[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
