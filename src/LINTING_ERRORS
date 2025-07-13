@@ -314,3 +314,1504 @@ bin/npm-build.sh not found or not executable
  [0;33m---------------------------------------- [0m
 [95m # committing files to git repo[0m
  [0;33m---------------------------------------- [0m
+[upgrades/automatedbranch/3to4 052eaa5] MNT: removing orig files
+ 1 file changed, 316 insertions(+)
+ create mode 100644 src/LINTING_ERRORS
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: upgrades/automatedbranch/3to4[0m
+ [0;33m---------------------------------------- [0m
+remote: 
+remote: GitHub found 17 vulnerabilities on sunnysideup/silverstripe-ecommerce_delivery_custom's default branch (2 high, 12 moderate, 3 low). To find out more, visit:        
+remote:      https://github.com/sunnysideup/silverstripe-ecommerce_delivery_custom/security/dependabot        
+remote: 
+To github.com:sunnysideup/silverstripe-ecommerce_delivery_custom.git
+   567b6e5..052eaa5  upgrades/automatedbranch/3to4 -> upgrades/automatedbranch/3to4
+From github.com:sunnysideup/silverstripe-ecommerce_delivery_custom
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch upgrades/automatedbranch/3to4
+Your branch is up to date with 'origin/upgrades/automatedbranch/3to4'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   LINTING_ERRORS
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ [0;33m---------------------------------------- [0m
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: Not all Code is Committed [0m
+[1;32;44m ---------------------------------------- [0m
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: There are changes to push [0m
+[1;32;44m ---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mNot on production, master, production or main branch. [0m
+ [0;33mYou are on upgrades/automatedbranch/3to4 branch. [0m
+ [0;33mNo tag created. [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+fatal: not a git repository (or any of the parent directories): .git
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: /var/www/upgrades/upgradeto4/. IS NOT A GIT REPO so I can not commit the changes. [0m
+[1;32;44m ---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run php check [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run linter ide annotator #1 [0m
+Unknown option: -a
+
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # PHP IDE-ANNOTATOR[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:          /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:         /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-h, --help                    show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-ide-annotator  app  [0m
+ [0;33m# run linter ecs #1 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run rector #1 [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Rector[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:           /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:          /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mAlso check (-a):               /var/www/upgrades/upgradeto4/app/_config.php [0m
+ [0;33mRector config file (-r):       /home/ssu/.config/composer/vendor/bin/../sunnysideup/easy-coding-standards/Rector.php [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-a, --also                     also lint - e.g. app/_config.php OR myfolder [0m
+ [0;33m-d, --dry-run                  dry run [0m
+ [0;33m-r, --rector-config            rector config file locaton e.g. ../rector.php [0m
+ [0;33m                               options are: [0m
+ [0;33m                               - Rector.php [0m
+ [0;33m                               - RectorSS5.php [0m
+ [0;33m                               - RectorSS6.php [0m
+ [0;33m-v, --verbose                  enable debug (verbose) mode [0m
+ [0;33m-h, --help                     show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-rector -a app_more/_config.php   -r ./RectorSS6.php   app/src  [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available Functions? Run ...[0m
+ [0;33m---------------------------------------- [0m
+ [0;32msake-help [0m
+ [0;33m---------------------------------------- [0m
+fatal: not a git repository (or any of the parent directories): .git
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: /var/www/upgrades/upgradeto4/. IS NOT A GIT REPO so I can not commit the changes. [0m
+[1;32;44m ---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run linter ide annotator #2 [0m
+Unknown option: -a
+
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # PHP IDE-ANNOTATOR[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:          /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:         /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-h, --help                    show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-ide-annotator  app  [0m
+ [0;33m# run ecs #2 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run rector #2 [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Rector[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:           /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:          /var/www/upgrades/upgradeto4/ecommerce_delivery_custom/src [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mAlso check (-a):               /var/www/upgrades/upgradeto4/app/_config.php [0m
+ [0;33mRector config file (-r):       /home/ssu/.config/composer/vendor/bin/../sunnysideup/easy-coding-standards/Rector.php [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-a, --also                     also lint - e.g. app/_config.php OR myfolder [0m
+ [0;33m-d, --dry-run                  dry run [0m
+ [0;33m-r, --rector-config            rector config file locaton e.g. ../rector.php [0m
+ [0;33m                               options are: [0m
+ [0;33m                               - Rector.php [0m
+ [0;33m                               - RectorSS5.php [0m
+ [0;33m                               - RectorSS6.php [0m
+ [0;33m-v, --verbose                  enable debug (verbose) mode [0m
+ [0;33m-h, --help                     show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-rector -a app_more/_config.php   -r ./RectorSS6.php   app/src  [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run ecs #3 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+====================================================
+ SELF-UPDATING (this happens from time to time)
+====================================================
+
+
+
+====================================================
+ UPDATING IN:
+ /home/ssu/.config/composer
+====================================================
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+c8d5d8f
+Fetching origin
+Fetching composer
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+====================================================
+ SELF-UPDATING (this happens from time to time)
+====================================================
+
+
+
+====================================================
+ UPDATING IN:
+ /home/ssu/.config/composer
+====================================================
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+c8d5d8f
+Fetching origin
+Fetching composer
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mChanges are within acceptable limits, no need for a review. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: automated commit[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: master[0m
+ [0;33m---------------------------------------- [0m
+Everything up-to-date
+From https://github.com/sunnysideup/silverstripe-easy-coding-standards
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ [0;33m---------------------------------------- [0m
+ [0;32m # ALL COMMITTED [0m
+ [0;32m # ALL PUSHED [0m
+ [0;33m---------------------------------------- [0m
+Fetching origin
+Fetching composer
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mBRANCH: master [0m
+ [0;33mCURRENT TAG: 20.4.2 [0m
+ [0;33mCHECKING COMMIT: MNT: automated commit [0m
+ [0;33mNEW TAG: none required [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+/home/ssu/.config/composer
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - exakat/exakat is locked to version v2.6.1 and an update of this package was not requested.
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+  Problem 2
+    - phan/phan is locked to version 5.5.0 and an update of this package was not requested.
+    - phan/phan 5.5.0 requires symfony/console ^3.2|^4.0|^5.0|^6.0|^7.0 -> satisfiable by symfony/console[v7.3.1].
+    - symfony/console v7.3.1 requires php >=8.2 -> your php version (8.1.32) does not satisfy that requirement.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires exakat/exakat ^2.6 -> satisfiable by exakat/exakat[v2.6.1].
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Easy to update[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Directly required packages out of date in composer.lock[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mChanges are within acceptable limits, no need for a review. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: automated commit[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: master[0m
+ [0;33m---------------------------------------- [0m
+Everything up-to-date
+From https://github.com/sunnysideup/silverstripe-easy-coding-standards
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ [0;33m---------------------------------------- [0m
+ [0;32m # ALL COMMITTED [0m
+ [0;32m # ALL PUSHED [0m
+ [0;33m---------------------------------------- [0m
+Fetching origin
+Fetching composer
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mBRANCH: master [0m
+ [0;33mCURRENT TAG: 20.4.2 [0m
+ [0;33mCHECKING COMMIT: MNT: automated commit [0m
+ [0;33mNEW TAG: none required [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+/home/ssu/.config/composer
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - exakat/exakat is locked to version v2.6.1 and an update of this package was not requested.
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+  Problem 2
+    - phan/phan is locked to version 5.5.0 and an update of this package was not requested.
+    - phan/phan 5.5.0 requires symfony/console ^3.2|^4.0|^5.0|^6.0|^7.0 -> satisfiable by symfony/console[v7.3.1].
+    - symfony/console v7.3.1 requires php >=8.2 -> your php version (8.1.32) does not satisfy that requirement.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires exakat/exakat ^2.6 -> satisfiable by exakat/exakat[v2.6.1].
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Easy to update[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Directly required packages out of date in composer.lock[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run stan [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # run the above on app/_config.php[0m
+ [0;33m---------------------------------------- [0m
+fatal: not a git repository (or any of the parent directories): .git
+ [0;33m# remove origs [0m
+ [0;33mCould not change directory to /var/www/upgrades/upgradeto4/app/_config.php [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Git commit and push[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mdirectory of script:           /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mdirectory to commit:           app/_config.php (relative to /var/www/upgrades/upgradeto4) [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mCommit and Push (-c):          yes [0m
+ [0;33mMessage (-m):                  MNT: removing orig files [0m
+ [0;33mNew Version (-v):              yes [0m
+ [0;33mAlso check (-a):               nothing-here-hopefully (relative to /var/www/upgrades/upgradeto4) [0m
+ [0;33mStatus Only (-s):              no [0m
+ [0;33mReview First (-r):             yes [0m
+ [0;33mAlso include themes (-t):      no [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-c, --commit-and-push          commit and push also? default: yes !!! [0m
+ [0;33m-m, --message                  commit message, defaults to last message used [0m
+ [0;33m-v, --new-version              create new tag (no|patch|minor|major), default: yes [0m
+ [0;33m-a, --also                     also do vendor - e.g. vendor/silverstripe OR vendor/sunnysideup [0m
+ [0;33m-n, --no-build                 do not run build script [0m
+ [0;33m-t, --themes-also              include folders in themes, default: no [0m
+ [0;33m-s, --status-only              status only, default: no !!! [0m
+ [0;33m-r, --review                   review first, default: yes [0m
+ [0;33m-h, --help                     show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33me.g. sake-git-commit-and-push  -m 'FIX: something' -v patch -a 'vendor/silverstripe'   -t yes  app/src  [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+fatal: not a git repository (or any of the parent directories): .git
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: /var/www/upgrades/upgradeto4/. IS NOT A GIT REPO so I can not commit the changes. [0m
+[1;32;44m ---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run php check [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run linter ide annotator #1 [0m
+Unknown option: -a
+
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # PHP IDE-ANNOTATOR[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:          /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:         /var/www/upgrades/upgradeto4/app/_config.php [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-h, --help                    show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-ide-annotator  app  [0m
+ [0;33m# run linter ecs #1 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run rector #1 [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+fatal: not a git repository (or any of the parent directories): .git
+[1;32;44m ---------------------------------------- [0m
+ [1;32;44m ERROR: /var/www/upgrades/upgradeto4/. IS NOT A GIT REPO so I can not commit the changes. [0m
+[1;32;44m ---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run linter ide annotator #2 [0m
+Unknown option: -a
+
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # PHP IDE-ANNOTATOR[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mDirectory of script:          /home/ssu/.config/composer/vendor/bin [0m
+ [0;33mDirectory to analyse:         /var/www/upgrades/upgradeto4/app/_config.php [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Current settings:[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Available settings:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33m-h, --help                    show help information [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Example usage:[0m
+ [0;33m---------------------------------------- [0m
+ [0;33msake-lint-ide-annotator  app  [0m
+ [0;33m# run ecs #2 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+====================================================
+ SELF-UPDATING (this happens from time to time)
+====================================================
+
+
+
+====================================================
+ UPDATING IN:
+ /home/ssu/.config/composer
+====================================================
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+c8d5d8f
+Fetching origin
+Fetching composer
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mChanges are within acceptable limits, no need for a review. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: automated commit[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: master[0m
+ [0;33m---------------------------------------- [0m
+Everything up-to-date
+From https://github.com/sunnysideup/silverstripe-easy-coding-standards
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ [0;33m---------------------------------------- [0m
+ [0;32m # ALL COMMITTED [0m
+ [0;32m # ALL PUSHED [0m
+ [0;33m---------------------------------------- [0m
+Fetching origin
+Fetching composer
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mBRANCH: master [0m
+ [0;33mCURRENT TAG: 20.4.2 [0m
+ [0;33mCHECKING COMMIT: MNT: automated commit [0m
+ [0;33mNEW TAG: none required [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+====================================================
+ SELF-UPDATING (this happens from time to time)
+====================================================
+
+
+
+====================================================
+ UPDATING IN:
+ /home/ssu/.config/composer
+====================================================
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # current commit[0m
+ [0;33m---------------------------------------- [0m
+c8d5d8f
+Fetching origin
+Fetching composer
+Already up to date.
+ [0;33m---------------------------------------- [0m
+ [0;33mjq is installed. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Looking for repositories using get_my_repos function[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Scanning for git repositories in /home/ssu/.config/composer/vendor/sunnysideup/easy-coding-standards/./[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m---------------------------------------- [0m
+bin/npm-build.sh not found or not executable
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # adding files to git repo[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mChanges are within acceptable limits, no need for a review. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Commit message: MNT: automated commit[0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # committing files to git repo[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # pushing commits to git repo, branch: master[0m
+ [0;33m---------------------------------------- [0m
+Everything up-to-date
+From https://github.com/sunnysideup/silverstripe-easy-coding-standards
+ * branch            HEAD       -> FETCH_HEAD
+ [0;33m✅ Branch is up-to-date. [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # check git status[0m
+ [0;33m---------------------------------------- [0m
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+ [0;33m---------------------------------------- [0m
+ [0;32m # ALL COMMITTED [0m
+ [0;32m # ALL PUSHED [0m
+ [0;33m---------------------------------------- [0m
+Fetching origin
+Fetching composer
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Creating Tag (if required)[0m
+ [0;33m---------------------------------------- [0m
+ [0;33mBRANCH: master [0m
+ [0;33mCURRENT TAG: 20.4.2 [0m
+ [0;33mCHECKING COMMIT: MNT: automated commit [0m
+ [0;33mNEW TAG: none required [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+/home/ssu/.config/composer
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - exakat/exakat is locked to version v2.6.1 and an update of this package was not requested.
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+  Problem 2
+    - phan/phan is locked to version 5.5.0 and an update of this package was not requested.
+    - phan/phan 5.5.0 requires symfony/console ^3.2|^4.0|^5.0|^6.0|^7.0 -> satisfiable by symfony/console[v7.3.1].
+    - symfony/console v7.3.1 requires php >=8.2 -> your php version (8.1.32) does not satisfy that requirement.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires exakat/exakat ^2.6 -> satisfiable by exakat/exakat[v2.6.1].
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Easy to update[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Directly required packages out of date in composer.lock[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+/home/ssu/.config/composer
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - exakat/exakat is locked to version v2.6.1 and an update of this package was not requested.
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+  Problem 2
+    - phan/phan is locked to version 5.5.0 and an update of this package was not requested.
+    - phan/phan 5.5.0 requires symfony/console ^3.2|^4.0|^5.0|^6.0|^7.0 -> satisfiable by symfony/console[v7.3.1].
+    - symfony/console v7.3.1 requires php >=8.2 -> your php version (8.1.32) does not satisfy that requirement.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires exakat/exakat ^2.6 -> satisfiable by exakat/exakat[v2.6.1].
+    - exakat/exakat v2.6.1 requires ext-sqlite3 * -> it is missing from your system. Install or enable PHP's sqlite3 extension.
+
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.1/cli/php.ini
+    - /etc/php/8.1/cli/conf.d/10-mysqlnd.ini
+    - /etc/php/8.1/cli/conf.d/10-opcache.ini
+    - /etc/php/8.1/cli/conf.d/10-pdo.ini
+    - /etc/php/8.1/cli/conf.d/15-xml.ini
+    - /etc/php/8.1/cli/conf.d/20-bcmath.ini
+    - /etc/php/8.1/cli/conf.d/20-calendar.ini
+    - /etc/php/8.1/cli/conf.d/20-ctype.ini
+    - /etc/php/8.1/cli/conf.d/20-curl.ini
+    - /etc/php/8.1/cli/conf.d/20-dom.ini
+    - /etc/php/8.1/cli/conf.d/20-exif.ini
+    - /etc/php/8.1/cli/conf.d/20-ffi.ini
+    - /etc/php/8.1/cli/conf.d/20-fileinfo.ini
+    - /etc/php/8.1/cli/conf.d/20-ftp.ini
+    - /etc/php/8.1/cli/conf.d/20-gd.ini
+    - /etc/php/8.1/cli/conf.d/20-gettext.ini
+    - /etc/php/8.1/cli/conf.d/20-iconv.ini
+    - /etc/php/8.1/cli/conf.d/20-igbinary.ini
+    - /etc/php/8.1/cli/conf.d/20-intl.ini
+    - /etc/php/8.1/cli/conf.d/20-mbstring.ini
+    - /etc/php/8.1/cli/conf.d/20-msgpack.ini
+    - /etc/php/8.1/cli/conf.d/20-mysqli.ini
+    - /etc/php/8.1/cli/conf.d/20-pdo_mysql.ini
+    - /etc/php/8.1/cli/conf.d/20-phar.ini
+    - /etc/php/8.1/cli/conf.d/20-posix.ini
+    - /etc/php/8.1/cli/conf.d/20-readline.ini
+    - /etc/php/8.1/cli/conf.d/20-shmop.ini
+    - /etc/php/8.1/cli/conf.d/20-simplexml.ini
+    - /etc/php/8.1/cli/conf.d/20-sockets.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvmsg.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvsem.ini
+    - /etc/php/8.1/cli/conf.d/20-sysvshm.ini
+    - /etc/php/8.1/cli/conf.d/20-tokenizer.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlreader.ini
+    - /etc/php/8.1/cli/conf.d/20-xmlwriter.ini
+    - /etc/php/8.1/cli/conf.d/20-xsl.ini
+You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
+Alternatively, you can run Composer with `--ignore-platform-req=ext-sqlite3` to temporarily ignore these required extensions.
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Easy to update[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Directly required packages out of date in composer.lock[0m
+ [0;33m---------------------------------------- [0m
+Cannot use exakat/exakat's latest version v2.6.1 as it requires ext-sqlite3 * which is missing from your platform.
+Legend:
+! patch or minor release available - update recommended
+~ major release available - update possible
+exakat/exakat 2.6.1 = [none matched] The smart static analyzer for PHP
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run rector #2 [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run ecs #3 [0m
+Composer detected issues in your platform:
+
+Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32.
+
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+ [0;33m# run stan [0m
+PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.32. in /home/ssu/.config/composer/vendor/composer/platform_check.php on line 24
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Dont forget to to commit and push[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+
+
+
+ [0;33m---------------------------------------- [0m
+[95m # Dont forget to to commit and push[0m
+ [0;33m---------------------------------------- [0m
+
+ [0;33m---------------------------------------- [0m
+ [0;32mCOMPLETED [0m
+ [0;33m---------------------------------------- [0m
+sh: 1: sslint-stan: not found
