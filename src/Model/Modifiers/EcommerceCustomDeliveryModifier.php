@@ -2,8 +2,13 @@
 
 namespace Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers;
 
-use OrderModifier;
-use EcommerceDBConfig;
+
+
+use Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig;
+use Sunnysideup\Ecommerce\Model\Address\ShippingAddress;
+use Sunnysideup\Ecommerce\Model\Address\BillingAddress;
+use Sunnysideup\Ecommerce\Model\OrderModifier;
+
 
 
 /**
@@ -240,10 +245,10 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         $postalCode = "";
         $order = $this->Order();
         if ($order) {
-            $shippingAddress = $order->CreateOrReturnExistingAddress("ShippingAddress");
+            $shippingAddress = $order->CreateOrReturnExistingAddress(ShippingAddress::class);
             $postalCode = $shippingAddress->ShippingPostalCode;
             if (!$postalCode) {
-                $billingAddress = $order->CreateOrReturnExistingAddress("BillingAddress");
+                $billingAddress = $order->CreateOrReturnExistingAddress(BillingAddress::class);
                 $postalCode = $billingAddress->PostalCode;
             }
         }

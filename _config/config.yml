@@ -3,15 +3,12 @@ Name: ecommerce_custom_delivery
 Before: 'app/*'
 After: 'framework/*','cms/*', 'ecommerce/*'
 ---
-
-EcommerceDBConfig:
+Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig:
   extensions:
-    - EcommerceCustomDeliveryEcommerceDBConfigExtension
-
-Product:
+    - Sunnysideup\EcommerceDeliveryCustom\Extensions\EcommerceCustomDeliveryEcommerceDBConfigExtension
+Sunnysideup\Ecommerce\Pages\Product:
   belongs_many_many:
-    EcommerceDBConfig: EcommerceDBConfig
-
-Order:
+    Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig: Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig
+Sunnysideup\Ecommerce\Model\Order:
   modifiers:
-    - EcommerceCustomDeliveryModifier
+    - Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers\EcommerceCustomDeliveryModifier

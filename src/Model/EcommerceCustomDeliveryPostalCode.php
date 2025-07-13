@@ -2,7 +2,10 @@
 
 namespace Sunnysideup\EcommerceDeliveryCustom\Model;
 
-use DataObject;
+
+use Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig;
+use SilverStripe\ORM\DataObject;
+
 
 
 class EcommerceCustomDeliveryPostalCode extends DataObject
@@ -28,7 +31,7 @@ class EcommerceCustomDeliveryPostalCode extends DataObject
     private static $singular_name = "Postal Code Special Delivery Zone";
 
     private static $belongs_many_many = array(
-        "EcommerceDBConfigs" => "EcommerceDBConfig"
+        "EcommerceDBConfigs" => EcommerceDBConfig::class
     );
 
     private static $summary_fields = array(

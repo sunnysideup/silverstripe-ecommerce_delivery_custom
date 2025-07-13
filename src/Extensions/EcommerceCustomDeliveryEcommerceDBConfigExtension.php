@@ -2,13 +2,23 @@
 
 namespace Sunnysideup\EcommerceDeliveryCustom\Extensions;
 
-use DataExtension;
-use FieldList;
-use TextField;
-use CurrencyField;
-use GridField;
-use GridFieldEditOriginalPageConfigWithDelete;
-use GridFieldConfig_RelationEditor;
+
+
+
+
+
+
+
+use Sunnysideup\Ecommerce\Pages\Product;
+use Sunnysideup\EcommerceDeliveryCustom\Model\EcommerceCustomDeliveryPostalCode;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CurrencyField;
+use Sunnysideup\Ecommerce\Forms\Gridfield\Configs\GridFieldEditOriginalPageConfigWithDelete;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\ORM\DataExtension;
+
 
 
 
@@ -29,8 +39,8 @@ class EcommerceCustomDeliveryEcommerceDBConfigExtension extends DataExtension
     );
 
     private static $many_many = array(
-        'DeliverySpecialChargedProducts' => 'Product',
-        'SpecialPricePostalCodes' => 'EcommerceCustomDeliveryPostalCode'
+        'DeliverySpecialChargedProducts' => Product::class,
+        'SpecialPricePostalCodes' => EcommerceCustomDeliveryPostalCode::class
     );
 
     private static $field_labels = array(
