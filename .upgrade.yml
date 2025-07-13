@@ -1,0 +1,4 @@
+mappings:
+  EcommerceCustomDeliveryPostalCode: Sunnysideup\EcommerceDeliveryCustom\Model\EcommerceCustomDeliveryPostalCode
+  EcommerceCustomDeliveryModifier: Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers\EcommerceCustomDeliveryModifier
+  EcommerceCustomDeliveryEcommerceDBConfigExtension: Sunnysideup\EcommerceDeliveryCustom\Extensions\EcommerceCustomDeliveryEcommerceDBConfigExtension

@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\EcommerceDeliveryCustom\Model;
+
+use DataObject;
+
+
 class EcommerceCustomDeliveryPostalCode extends DataObject
 {
 

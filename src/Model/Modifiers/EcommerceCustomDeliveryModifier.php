@@ -1,5 +1,11 @@
 <?php
 
+namespace Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers;
+
+use OrderModifier;
+use EcommerceDBConfig;
+
+
 /**
  * @author Nicolaas [at] sunnysideup.co.nz
  * @package: ecommerce
