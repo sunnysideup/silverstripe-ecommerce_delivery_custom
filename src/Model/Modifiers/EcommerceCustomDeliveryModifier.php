@@ -44,8 +44,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
-        return $fields;
+        return parent::getCMSFields();
     }
 
     private static $singular_name = "Delivery Charge";
@@ -98,7 +97,6 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     /**
      * Should the form be included in the editable form
      * on the checkout page?
-     * @return Boolean
      */
     public function ShowFormInEditableOrderTable(): bool
     {
@@ -116,11 +114,9 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     }
 
     // ######################################## *** template functions (e.g. ShowInTable, TableTitle, etc...) ... USES DB VALUES
-
     /**
      * standard OrderModifer Method
      * Tells us if the modifier should take up a row in the table on the checkout page.
-     * @return Boolean
      */
     public function ShowInTable(): bool
     {
@@ -130,7 +126,6 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     /**
      * standard OrderModifer Method
      * Tells us if the modifier can be removed (hidden / turned off) from the order.
-     * @return Boolean
      */
     public function CanBeRemoved(): bool
     {
@@ -169,7 +164,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     protected function LiveCalculatedTotal()
     {
         $specialCount =  $this->LiveSpecialProductCount();
-        $nonSpecialCount =  $this->LiveNonSpecialProductCount();
+        $this->LiveNonSpecialProductCount();
 
         $postalCodeObjectOrDefaultConfig =  $this->MyPostalCodeObject();
         if (! $postalCodeObjectOrDefaultConfig) {
@@ -182,7 +177,6 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         } else {
             return $nonSpecialPrice;
         }
-        return 0;
     }
 
 
@@ -218,7 +212,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         $specialCount = 0;
         $nonSpecialCount = 0;
         $applicableProducts = $this->SelectedProductsArray();
-        if (count($applicableProducts)) {
+        if (count($applicableProducts) > 0) {
             $order = $this->Order();
             if ($order) {
                 foreach ($order->OrderItems() as $item) {
@@ -278,7 +272,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     {
         $ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
         $postalCode = intval($this->LivePostalCode());
-        if ($postalCode) {
+        if ($postalCode !== 0) {
             return $ecommerceConfig->SpecialPricePostalCodes()
                 ->where(
                     "$postalCode >= \"PostalCodeLowestNumber\" AND $postalCode <= \"PostalCodeHighestNumber\" "
