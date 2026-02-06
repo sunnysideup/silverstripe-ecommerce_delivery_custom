@@ -2,14 +2,10 @@
 
 namespace Sunnysideup\EcommerceDeliveryCustom\Model\Modifiers;
 
-
-
-use Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig;
-use Sunnysideup\Ecommerce\Model\Address\ShippingAddress;
 use Sunnysideup\Ecommerce\Model\Address\BillingAddress;
+use Sunnysideup\Ecommerce\Model\Address\ShippingAddress;
+use Sunnysideup\Ecommerce\Model\Config\EcommerceDBConfig;
 use Sunnysideup\Ecommerce\Model\OrderModifier;
-
-
 
 /**
  * @author Nicolaas [at] sunnysideup.co.nz
@@ -21,8 +17,7 @@ use Sunnysideup\Ecommerce\Model\OrderModifier;
  **/
 class EcommerceCustomDeliveryModifier extends OrderModifier
 {
-
-    private static $table_name = "EcommerceCustomDeliveryModifier";
+    private static $table_name = 'EcommerceCustomDeliveryModifier';
 
     // ######################################## *** model defining static variables (e.g. $db, $has_one)
 
@@ -30,12 +25,11 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      * add extra fields as you need them.
      *
      **/
-    private static $db = array(
-        "PostalCode" => "Varchar(10)",
-        "SpecialProductCount" => "Int",
-        "NonSpecialProductCount" => "Int"
-    );
-
+    private static $db = [
+        'PostalCode' => 'Varchar(10)',
+        'SpecialProductCount' => 'Int',
+        'NonSpecialProductCount' => 'Int',
+    ];
 
     // ######################################## *** cms variables + functions (e.g. getCMSFields, $searchableFields)
 
@@ -47,20 +41,21 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         return parent::getCMSFields();
     }
 
-    private static $singular_name = "Delivery Charge";
+    private static $singular_name = 'Delivery Charge';
+
     public function i18n_singular_name()
     {
         return self::$singular_name;
     }
 
-    private static $plural_name = "Delivery Charges";
+    private static $plural_name = 'Delivery Charges';
+
     public function i18n_plural_name()
     {
         return self::$plural_name;
     }
 
     // ######################################## *** other (non) static variables (e.g. protected static $special_name_for_something, protected $order)
-
 
     // ######################################## *** CRUD functions (e.g. canEdit)
     // ######################################## *** init and update functions
@@ -72,16 +67,15 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
      * Live{functionName}
      * e.g LiveMyField() and LiveMyReduction() in this case...
      * The OrderModifier already updates the basic database fields.
-     * @param Bool $force - run it, even if it has run already
+     * @param bool $force - run it, even if it has run already
      */
     public function runUpdate($force = false)
     {
-        $this->checkField("PostalCode");
-        $this->checkField("SpecialProductCount");
-        $this->checkField("NonSpecialProductCount");
+        $this->checkField('PostalCode');
+        $this->checkField('SpecialProductCount');
+        $this->checkField('NonSpecialProductCount');
         parent::runUpdate($force);
     }
-
 
     // ######################################## *** form functions (e. g. Showform and getform)
 
@@ -106,7 +100,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     /**
      * Should the form be included in the editable form
      * on the checkout page?
-     * @return Boolean
+     * @return boolean
      */
     public function ShowFormOutsideEditableOrderTable()
     {
@@ -134,8 +128,6 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
 
     // ######################################## ***  inner calculations.... USES CALCULATED VALUES
 
-
-
     // ######################################## *** calculate database fields: protected function Live[field name]  ... USES CALCULATED VALUES
 
     /**
@@ -152,8 +144,8 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
             $title = EcommerceDBConfig::current_ecommerce_db_config()->DeliveryChargeTitle;
         }
         if ($postalCode = $this->LivePostalCode()) {
-            if ($postalCodeLabel = _t("EcommerceCustomDeliveryModifier.POSTAL_CODE", "postal code")) {
-                $title .= " (" . $postalCodeLabel . ": " . $postalCode . ")";
+            if ($postalCodeLabel = _t('EcommerceCustomDeliveryModifier.POSTAL_CODE', 'postal code')) {
+                $title .= ' (' . $postalCodeLabel . ': ' . $postalCode . ')';
             }
         } else {
             //do nothing...
@@ -163,10 +155,10 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
 
     protected function LiveCalculatedTotal()
     {
-        $specialCount =  $this->LiveSpecialProductCount();
+        $specialCount = $this->LiveSpecialProductCount();
         $this->LiveNonSpecialProductCount();
 
-        $postalCodeObjectOrDefaultConfig =  $this->MyPostalCodeObject();
+        $postalCodeObjectOrDefaultConfig = $this->MyPostalCodeObject();
         if (! $postalCodeObjectOrDefaultConfig) {
             $postalCodeObjectOrDefaultConfig = EcommerceDBConfig::current_ecommerce_db_config();
         }
@@ -179,11 +171,7 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         }
     }
 
-
-
     // ######################################## *** Type Functions (IsChargeable, IsDeductable, IsNoChange, IsRemoved)
-
-
 
     // ######################################## *** standard database related functions (e.g. onBeforeWrite, onAfterWrite, etc...)
 
@@ -232,17 +220,16 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
     }
 
     /**
-     *
-     * @return String
+     * @return string
      */
     public function LivePostalCode()
     {
-        $postalCode = "";
+        $postalCode = '';
         $order = $this->Order();
         if ($order) {
             $shippingAddress = $order->CreateOrReturnExistingAddress(ShippingAddress::class);
             $postalCode = $shippingAddress->ShippingPostalCode;
-            if (!$postalCode) {
+            if (! $postalCode) {
                 $billingAddress = $order->CreateOrReturnExistingAddress(BillingAddress::class);
                 $postalCode = $billingAddress->PostalCode;
             }
@@ -250,22 +237,19 @@ class EcommerceCustomDeliveryModifier extends OrderModifier
         if (intval($postalCode) > 0) {
             return $postalCode;
         }
-        return "";
+        return '';
     }
 
-
     /**
-     *
      * @array
      */
     private function SelectedProductsArray()
     {
         $ecommerceConfig = EcommerceDBConfig::current_ecommerce_db_config();
-        return $ecommerceConfig->DeliverySpecialChargedProducts()->map("ID", "ID")->toArray();
+        return $ecommerceConfig->DeliverySpecialChargedProducts()->map('ID', 'ID')->toArray();
     }
 
     /**
-     *
      * @return EcommerceCustomDeliveryPostalCode | null
      */
     private function MyPostalCodeObject()
